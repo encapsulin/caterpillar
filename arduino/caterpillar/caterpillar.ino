@@ -122,12 +122,12 @@ void setDirection(char c) {
     digitalWrite(AIN1, LOW);
     digitalWrite(BIN2, HIGH);
     digitalWrite(BIN1, LOW);
-  } else if (c == 'l') {
+  } else if (c == 'r') {
     digitalWrite(AIN2, HIGH);
     digitalWrite(AIN1, LOW);
     digitalWrite(BIN1, HIGH);
     digitalWrite(BIN2, LOW);
-  } else if (c == 'r') {
+  } else if (c == 'l') {
     digitalWrite(AIN1, HIGH);
     digitalWrite(AIN2, LOW);
     digitalWrite(BIN2, HIGH);
