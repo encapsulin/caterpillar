@@ -35,7 +35,7 @@ void setup() {
   // BoutputValue = map(BsensorValue, 0, 1023, 0, 255);
   // analogWrite(BPWM, BoutputValue);
   setDirection('f');
-  setPowerA('c');
+  setPowerA('f');
 
   pinMode(rxPin, INPUT);
   pinMode(txPin, OUTPUT);
@@ -83,8 +83,8 @@ String myserial_read() {
 void serial_process(String sin) {
 
   if (sin.length() >= 2) {
-    Serial.println("serial_process()" + sin);
-    Serial.println(sin.length());
+    // Serial.println("serial_process()" + sin);
+    // Serial.println(sin.length());
     char cmd = sin.charAt(0);
     char cval = sin.charAt(1);
     char allowedPower[] = "PpSs";
@@ -133,7 +133,7 @@ void setDirection(char c) {
     digitalWrite(BIN2, HIGH);
     digitalWrite(BIN1, LOW);
   }
-  powergo = 5;
+  powergo = 3;
 }
 
 void process_powergo() {
